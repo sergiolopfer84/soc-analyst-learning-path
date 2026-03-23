@@ -37,7 +37,7 @@ The objective was to investigate authentication events, identify anomalies, and 
 
 📸 Evidence:
 
-![Failed Attempts](images/Elastic1.jpg)
+![Post Termination Activity](images/Elastic2.jpg)
 
 ---
 
@@ -52,7 +52,8 @@ The objective was to investigate authentication events, identify anomalies, and 
 
 📸 Evidence:
 
-![Post Termination Activity](images/Elastic2.jpg)
+![Failed Attempts](images/Elastic1.jpg)
+
 ---
 
 ## 🧠 Analysis Approach
