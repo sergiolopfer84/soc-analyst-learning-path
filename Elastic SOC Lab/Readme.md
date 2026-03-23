@@ -37,7 +37,7 @@ The objective was to investigate authentication events, identify anomalies, and 
 
 📸 Evidence:
 
-![Failed Attempts](images/Elastic1.png)
+![Failed Attempts](images/Elastic1.jpg)
 
 ---
 
@@ -51,7 +51,8 @@ The objective was to investigate authentication events, identify anomalies, and 
   - Credential misuse or compromise
 
 📸 Evidence:
-![Post Termination Activity](images/Elastic2.png)
+
+![Post Termination Activity](images/Elastic2.jpg)
 ---
 
 ## 🧠 Analysis Approach
