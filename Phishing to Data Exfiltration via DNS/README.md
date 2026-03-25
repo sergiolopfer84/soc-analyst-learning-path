@@ -63,7 +63,7 @@ This behavior is commonly observed before data exfiltration.
 The attacker exfiltrated data using DNS queries via `nslookup`.
 
 📸 Evidence:  
-![DNS Exfiltration](images/nslookup-exfiltration.jpg)
+![DNS Exfiltration](images/nslookupexfiltration.jpg)
 
 This technique allows data to be hidden within DNS traffic, making detection more difficult.
 
