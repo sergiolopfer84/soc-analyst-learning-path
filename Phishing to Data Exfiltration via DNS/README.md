@@ -35,7 +35,7 @@ After execution, the attacker gained access, performed internal reconnaissance, 
 A malicious email with a ZIP attachment triggered the compromise.
 
 📸 Evidence:
-![Phishing Email](images/1.-phishing.jpg)
+![Phishing Email](images/1. -phishing.jpg)
 
 ---
 
@@ -43,7 +43,7 @@ A malicious email with a ZIP attachment triggered the compromise.
 The attacker mapped a network drive to access internal financial records.
 
 📸 Evidence:
-![Network Share Access](images/2.-netuse.jpg)
+![Network Share Access](images/2. -netuse.jpg)
 
 Command observed:
 net use Z: \FILESRV-01\SSF-FinancialRecords
@@ -63,7 +63,7 @@ This indicates preparation before exfiltration.
 Data was exfiltrated using DNS queries via nslookup.
 
 📸 Evidence:
-![DNS Exfiltration](images/3.-nslookup exfiltration.jpg)
+![DNS Exfiltration](images/3. -nslookup exfiltration.jpg)
 
 This technique hides data within DNS traffic, making detection more difficult.
 
