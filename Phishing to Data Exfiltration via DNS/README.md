@@ -6,10 +6,10 @@ This scenario simulates a real-world SOC investigation where a phishing email le
 ---
 
 ## 🎯 Objective
-- Identify True Positive alerts  
-- Reconstruct the attack chain  
-- Correlate events across multiple stages  
-- Understand attacker behavior  
+- Identify True Positive alerts
+- Reconstruct the attack chain
+- Correlate events across multiple stages
+- Understand attacker behavior
 
 ---
 
@@ -36,7 +36,7 @@ After execution, the attacker gained access to the system, performed internal re
 A malicious email with a ZIP attachment triggered the compromise.
 
 📸 Evidence:  
-![Phishing Email](images/1.- phishing.jpg)
+![Phishing Email](images/phishing.jpg)
 
 ---
 
@@ -44,7 +44,7 @@ A malicious email with a ZIP attachment triggered the compromise.
 The attacker mapped a network drive to access internal financial records.
 
 📸 Evidence:  
-![Network Share Access](images/2.- netuse.jpg)
+![Network Share Access](images/netuse.jpg)
 
 This activity indicates unauthorized access to sensitive internal data via a legitimate Windows command.
 
@@ -63,7 +63,7 @@ This behavior is commonly observed before data exfiltration.
 The attacker exfiltrated data using DNS queries via `nslookup`.
 
 📸 Evidence:  
-![DNS Exfiltration](images/3.- nslookup exfiltration.jpg)
+![DNS Exfiltration](images/nslookup-exfiltration.jpg)
 
 This technique allows data to be hidden within DNS traffic, making detection more difficult.
 
@@ -77,38 +77,34 @@ This behavior is consistent with attempts to hide malicious activity.
 ---
 
 ## 🧩 Attack Chain Summary
-
-1. Phishing email with malicious attachment  
-2. Execution via PowerShell  
-3. Internal reconnaissance (PowerView)  
-4. Lateral movement via RDP  
-5. Access to internal file shares  
-6. Data staging using robocopy  
-7. Data exfiltration via DNS (nslookup)  
-8. Cleanup of artifacts  
+1. Phishing email with malicious attachment
+2. Execution via PowerShell
+3. Internal reconnaissance (PowerView)
+4. Lateral movement via RDP
+5. Access to internal file shares
+6. Data staging using robocopy
+7. Data exfiltration via DNS (`nslookup`)
+8. Cleanup of artifacts
 
 ---
 
 ## 📊 Results
-
-- ✅ True Positive Rate: 100%  
-- ✅ False Positive Handling: 90%  
-- ⏱ Mean Time to Resolve: 1 minute  
-- 🕒 Mean Dwell Time: 14 minutes  
+- ✅ True Positive Rate: 100%
+- ✅ False Positive Handling: 90%
+- ⏱ Mean Time to Resolve: 1 minute
+- 🕒 Mean Dwell Time: 14 minutes
 
 ---
 
 ## 💡 Key Takeaways
-
-- Context is more important than individual alerts  
-- Legitimate tools (LOLBins) can be abused by attackers  
-- DNS can be used as a covert exfiltration channel  
-- Identifying patterns is key to reducing dwell time  
+- Context is more important than individual alerts
+- Legitimate tools (LOLBins) can be abused by attackers
+- DNS can be used as a covert exfiltration channel
+- Identifying patterns is key to reducing dwell time
 
 ---
 
 ## 🚀 Final Thoughts
-
 This investigation highlights the importance of correlating multiple alerts to understand the full scope of an attack.
 
 Rather than analyzing events in isolation, a SOC analyst must reconstruct attacker behavior across the entire attack chain.
