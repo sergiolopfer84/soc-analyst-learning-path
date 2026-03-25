@@ -35,7 +35,7 @@ After execution, the attacker gained access, performed internal reconnaissance, 
 A malicious email with a ZIP attachment triggered the compromise.
 
 📸 Evidence:
-![Phishing Email](images/phishing.jpg)
+![Phishing Email](images/1.-phishing.jpg)
 
 ---
 
@@ -43,6 +43,75 @@ A malicious email with a ZIP attachment triggered the compromise.
 The attacker mapped a network drive to access internal financial records.
 
 📸 Evidence:
-![Network Share Access](images/netuse.jpg)
+![Network Share Access](images/2.-netuse.jpg)
 
 Command observed:
+net use Z: \FILESRV-01\SSF-FinancialRecords
+
+
+---
+
+### 📌 3. Data Staging
+Sensitive data was copied locally using legitimate tools.
+
+
+This indicates preparation before exfiltration.
+
+---
+
+### 📌 4. Data Exfiltration (DNS)
+Data was exfiltrated using DNS queries via nslookup.
+
+📸 Evidence:
+![DNS Exfiltration](images/3.-nslookup exfiltration.jpg)
+
+This technique hides data within DNS traffic, making detection more difficult.
+
+---
+
+### 📌 5. Cleanup
+The attacker removed traces by disconnecting mapped network drives.
+
+net use Z: /delete
+
+
+---
+
+## 🧩 Attack Chain Summary
+
+1. Phishing email → malicious ZIP  
+2. Execution via PowerShell  
+3. Internal reconnaissance (PowerView)  
+4. Lateral movement via RDP  
+5. Access to internal file shares  
+6. Data staging (robocopy)  
+7. Data exfiltration via DNS  
+8. Cleanup (removal of network connections)  
+
+---
+
+## 📊 Results
+
+- ✅ True Positive Rate: 100%  
+- ✅ False Positive Handling: 90%  
+- ⏱ Mean Time to Resolve: 1 minute  
+- 🕒 Mean Dwell Time: 14 minutes  
+
+---
+
+## 💡 Key Takeaways
+
+- Context is more important than individual alerts  
+- Legitimate tools (LOLBins) are commonly used by attackers  
+- DNS can be abused for stealthy data exfiltration  
+- Detecting patterns reduces dwell time significantly  
+
+---
+
+## 🚀 Final Thoughts
+
+This investigation highlights the importance of correlating multiple alerts to understand the full scope of an attack.
+
+Rather than analyzing events in isolation, a SOC analyst must reconstruct attacker behavior across the entire kill chain.
+
+---
