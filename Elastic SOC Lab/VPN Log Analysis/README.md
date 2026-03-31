@@ -35,9 +35,9 @@ The objective was to investigate authentication events, identify anomalies, and 
 - Originated from the same IP: `172.201.60.191`
 - Pattern suggests **automated brute-force attack**
 
-📸 Evidence:
+📸 Evidence – Multiple failed login attempts from a single IP targeting user Simon:
 
-![Post Termination Activity](images/Elastic2.jpg)
+![Failed Attempts](images/failedLogins.jpg)
 
 ---
 
@@ -50,9 +50,9 @@ The objective was to investigate authentication events, identify anomalies, and 
   - Failure in access revocation
   - Credential misuse or compromise
 
-📸 Evidence:
+📸 Evidence – VPN login detected after user termination:
 
-![Failed Attempts](images/Elastic1.jpg)
+![VPN Login](images/VPNlogin.jpg)
 
 ---
 
