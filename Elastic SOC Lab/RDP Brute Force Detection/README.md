@@ -52,7 +52,7 @@ hydra -l victima -P pass.txt rdp://192.168.0.23
 
 ### 🔹 Brute Force Execution
 
-![Brute Force](images/bruteforce.jpg)
+![Brute Force](images/bruteforce.jpeg)
 
 ### 🔹 Elastic Logs (Event Code 3)
 
